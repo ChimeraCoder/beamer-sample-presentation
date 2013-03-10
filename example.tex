@@ -1,14 +1,8 @@
-% $Header$
-
 \documentclass{beamer}
 
-% This file is a solution template for:
-
-% - Giving a talk on some subject.
-% - The talk is between 15min and 45min long.
-% - Style is ornate.
-
-
+%This is an exercise in getting familiar with Beamer
+%For practice, the talk 'Go for Pythonists' will be (partly) ported
+%to Beamer, as a demonstration
 
 % Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
 %
@@ -25,11 +19,9 @@
 
 \mode<presentation>
 {
-  \usetheme{CambridgeUS}
-  % or ...
-
-  \setbeamercovered{transparent}
-  % or whatever (possibly just delete it)
+  \usetheme{boxes}
+  %\setbeamercovered{transparent}
+  \setbeamercovered{invisible} %default
 }
 
 
@@ -45,44 +37,25 @@
 % does not look nice, try deleting the line with the fontenc.
 
 
-\title[Short Paper Title] % (optional, use only with long paper titles)
-{Presentation Title}
+\title[Go for Pythonists] % (optional, use only with long paper titles)
+{Go for Pythonists}
 
 \subtitle
-{Presentation Subtitle} % (optional)
+{A basic introduction} % (optional)
 
-\author[Author, Another] % (optional, use only with lots of authors)
-{F.~Author\inst{1} \and S.~Another\inst{2}}
-% - Use the \inst{?} command only if the authors have different
-%   affiliation.
+\author[Aditya Mukerjee] % (optional, use only with lots of authors)
+{Aditya Mukerjee}
 
-\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
-{
-  \inst{1}%
-  Department of Computer Science\\
-  University of Somewhere
-  \and
-  \inst{2}%
-  Department of Theoretical Philosophy\\
-  University of Elsewhere}
-% - Use the \inst command only if there are several affiliations.
-% - Keep it simple, no one is interested in your street address.
-
-\date[Short Occasion] % (optional)
-{Date / Occasion}
-
-\subject{Talks}
-% This is only inserted into the PDF information catalog. Can be left
-% out. 
-
+\date[March 7, 2013] % (optional)
+{New York Python Meetup}
 
 
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
 
-% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
-% \logo{\pgfuseimage{university-logo}}
+ \pgfdeclareimage[height=0.5cm]{university-logo}{88x31}
+\logo{\pgfuseimage{university-logo}}
 
 
 
@@ -90,7 +63,7 @@
 % the beginning of each subsection:
 \AtBeginSubsection[]
 {
-  \begin{frame}<beamer>{Outline}
+  \begin{frame}<beamer>{Overview}
     \tableofcontents[currentsection,currentsubsection]
   \end{frame}
 }
@@ -128,17 +101,56 @@
 
 \subsection[Short First Subsection Name]{First Subsection Name}
 
-\begin{frame}{Make Titles Informative. Use Uppercase Letters.}{Subtitles are optional.}
+\begin{frame}{}
+    \begin{center}
+        Python is awesome!
+    \end{center}
+\end{frame}
+
+\begin{frame}{Python is awesome!}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
   \begin{itemize}
+          \pause
   \item
-    Use \texttt{itemize} a lot.
+      Easy to read, even for non-Pythonists
+      \pause
   \item
-    Use very short sentences or short phrases.
+      Only one (obvious) way to do it
+      \pause
+  \item
+      etc.
   \end{itemize}
 \end{frame}
+
+\begin{frame}{}
+    \begin{center}
+        Python can be not-so-awesome\dots
+    \end{center}
+\end{frame}
+
+\begin{frame}{Python can be not-so-awesome\dots}
+    \begin{itemize}
+            \pause
+        \item
+            Dynamic + strong typing = careless, fatal errors
+            \pause
+        \item
+            Slow (compared to C)
+            \pause
+        \item
+            Migrating code between versions requires work (ie, py3k)
+            \pause
+        \item
+            Threading
+            
+    \end{itemize}
+
+\end{frame}
+
+
+
 
 \begin{frame}{Make Titles Informative.}
 
@@ -189,23 +201,23 @@
   % Keep the summary *very short*.
   \begin{itemize}
   \item
-    The \alert{first main message} of your talk in one or two lines.
+    Python has \alert{a lot of awesome things}.
   \item
-    The \alert{second main message} of your talk in one or two lines.
+    Go \alert{combines these awesome things} with an increased focus on concurrent programming.
   \item
-    Perhaps a \alert{third message}, but not more than that.
+    Go is still \alert{under development}.
   \end{itemize}
   
   % The following outlook is optional.
   \vskip0pt plus.5fill
   \begin{itemize}
   \item
-    Outlook
+      Further steps
     \begin{itemize}
     \item
-      Something you haven't solved.
+        Read the Go language spec (it's readable!)
     \item
-      Something else you haven't solved.
+        Hop on \#go-nuts.
     \end{itemize}
   \end{itemize}
 \end{frame}
