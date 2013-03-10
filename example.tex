@@ -50,29 +50,29 @@
 {New York Python Meetup}
 
 
-% If you have a file called "university-logo-filename.xxx", where xxx
+% If you have a file called "88x31.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
 
- \pgfdeclareimage[height=0.5cm]{university-logo}{88x31}
+\pgfdeclareimage[height=0.5cm]{university-logo}{88x31}
 \logo{\pgfuseimage{university-logo}}
 
 
 
-% Delete this, if you do not want the table of contents to pop up at
+% Comment this out if you do not want the table of contents to pop up at
 % the beginning of each subsection:
-\AtBeginSubsection[]
-{
-  \begin{frame}<beamer>{Overview}
-    \tableofcontents[currentsection,currentsubsection]
-  \end{frame}
-}
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>{Overview}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
 
 
 % If you wish to uncover everything in a step-wise fashion, uncomment
 % the following command: 
 
-%\beamerdefaultoverlayspecification{<+->}
+\beamerdefaultoverlayspecification{<+->}
 
 
 \begin{document}
@@ -82,8 +82,7 @@
 \end{frame}
 
 \begin{frame}{Outline}
-  \tableofcontents
-  % You might wish to add the option [pausesections]
+    \tableofcontents[pausesections]
 \end{frame}
 
 
@@ -97,9 +96,9 @@
 % - Talk about 30s to 2min per frame. So there should be between about
 %   15 and 30 frames, all told.
 
-\section{Introduction}
+\section{Motivation}
 
-\subsection[Short First Subsection Name]{First Subsection Name}
+\subsection[Why?]{Why do we care?}
 
 \begin{frame}{}
     \begin{center}
@@ -107,18 +106,16 @@
     \end{center}
 \end{frame}
 
+
 \begin{frame}{Python is awesome!}
   % - A title should summarize the slide in an understandable fashion
   %   for anyone how does not follow everything on the slide itself.
 
   \begin{itemize}
-          \pause
   \item
       Easy to read, even for non-Pythonists
-      \pause
   \item
       Only one (obvious) way to do it
-      \pause
   \item
       etc.
   \end{itemize}
@@ -132,66 +129,42 @@
 
 \begin{frame}{Python can be not-so-awesome\dots}
     \begin{itemize}
-            \pause
         \item
             Dynamic + strong typing = careless, fatal errors
-            \pause
         \item
             Slow (compared to C)
-            \pause
         \item
             Migrating code between versions requires work (ie, py3k)
-            \pause
         \item
             Threading
-            
     \end{itemize}
-
 \end{frame}
 
+\section{Basic Go}
 
+\begin{frame}{Basic Syntax}
+    It exists
+\end{frame}
+\subsection{Environment}
 
-
-\begin{frame}{Make Titles Informative.}
-
-  You can create overlays\dots
-  \begin{itemize}
-  \item using the \texttt{pause} command:
+\begin{frame}{Package Management}
+    %Example of revealing an image using the more general 'uncover' command
     \begin{itemize}
-    \item
-      First item.
-      \pause
-    \item    
-      Second item.
+        \item
+            Use slices, not arrays.
+        \item
+            Unexported (lowercase) fields are not externally visible.
+        \item
+            Execution ends when the \texttt{main} function terminates.
     \end{itemize}
-  \item
-    using overlay specifications:
-    \begin{itemize}
-    \item<3->
-      First item.
-    \item<4->
-      Second item.
-    \end{itemize}
-  \item
-    using the general \texttt{uncover} command:
-    \begin{itemize}
-      \uncover<5->{\item
-        First item.}
-      \uncover<6->{\item
-        Second item.}
-    \end{itemize}
-  \end{itemize}
+    \uncover<4->{
+        \begin{figure}
+            %Example of including an image
+            \includegraphics[<options, e.g. width=\textwidth>]{88x31.png}
+        \end{figure}
+    }
+
 \end{frame}
-
-
-\subsection{Second Subsection}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
-\begin{frame}{Make Titles Informative.}
-\end{frame}
-
 
 
 \section*{Summary}
